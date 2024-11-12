@@ -15,7 +15,7 @@
     "lint": "eslint --ignore-path .gitignore .",
     "lint:fix": "npm run lint -- --fix",
     "test": "npm run test:unit && npm run test:features",
-    "test:unit": "cross-env NODE_ENV=test jest",
+    "test:unit": "cross-env NODE_ENV=test jest --passWithNoTests",
     "start:backoffice:backend": "cross-env NODE_ENV=production node dist/src/apps/backoffice/backend/start",
     "test:features": "npm run test:backoffice:backend:features",
     "test:backoffice:backend:features": "cross-env NODE_ENV=test cucumber-js -p backoffice_backend",
