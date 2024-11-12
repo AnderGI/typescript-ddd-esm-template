@@ -1,5 +1,5 @@
-import { Course } from '../../../../../src/Contexts/Mooc/Courses/domain/Course';
-import { CourseRepository } from '../../../../../src/Contexts/Mooc/Courses/domain/CourseRepository';
+import { Course } from '../../../../../src/contexts/mooc/courses/domain/Course';
+import { CourseRepository } from '../../../../../src/contexts/mooc/courses/domain/CourseRepository';
 
 export class CourseRepositoryMock implements CourseRepository {
 	private readonly mockSave = jest.fn();
