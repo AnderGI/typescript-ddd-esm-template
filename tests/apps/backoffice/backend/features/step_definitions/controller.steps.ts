@@ -2,10 +2,10 @@ import { AfterAll, BeforeAll, Given, Then } from '@cucumber/cucumber';
 import assert from 'assert';
 import request from 'supertest';
 
-import { MoocBackendApp } from '../../../../../../src/apps/mooc/backend/MoocBackendApp';
+import { BackofficeBackendApp } from '../../../../../../src/apps/backoffice/backend/BackofficeBackendApp';
 
 let _request: request.Test;
-let application: MoocBackendApp;
+let application: BackofficeBackendApp;
 let _response: request.Response;
 
 Given('I send a GET request to {string}', (route: string) => {
@@ -27,7 +27,7 @@ Then('the response should be empty', () => {
 });
 
 BeforeAll(() => {
-	application = new MoocBackendApp();
+	application = new BackofficeBackendApp();
 	application.start();
 });
 

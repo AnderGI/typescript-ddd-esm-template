@@ -1,6 +1,6 @@
 import { Server } from './server';
 
-export class MoocBackendApp {
+export class BackofficeBackendApp {
 	server?: Server;
 
 	async start(): Promise<void> {
@@ -11,6 +11,7 @@ export class MoocBackendApp {
 	}
 
 	get httpServer(): Server['httpServer'] | undefined {
+		// eslint-disable-next-line @typescript-eslint/no-unsafe-return
 		return this.server?.getHTTPServer();
 	}
 

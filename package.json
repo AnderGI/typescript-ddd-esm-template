@@ -11,14 +11,14 @@
     "npm": ">=10.0.0"
   },
 "scripts": {
-    "dev:mooc:backend": "cross-env NODE_ENV=dev ts-node-dev --ignore-watch node_modules  ./src/apps/mooc/backend/start.ts",
+    "dev:backoffice:backend": "cross-env NODE_ENV=dev ts-node-dev --ignore-watch node_modules  ./src/apps/backoffice/backend/start.ts",
     "lint": "eslint --ignore-path .gitignore .",
     "lint:fix": "npm run lint -- --fix",
     "test": "npm run test:unit && npm run test:features",
     "test:unit": "cross-env NODE_ENV=test jest",
-    "start:mooc:backend": "cross-env NODE_ENV=production node dist/src/apps/mooc/backend/start",
-    "test:features": "npm run test:mooc:backend:features",
-    "test:mooc:backend:features": "cross-env NODE_ENV=test cucumber-js -p mooc_backend",
+    "start:backoffice:backend": "cross-env NODE_ENV=production node dist/src/apps/backoffice/backend/start",
+    "test:features": "npm run test:backoffice:backend:features",
+    "test:backoffice:backend:features": "cross-env NODE_ENV=test cucumber-js -p backoffice_backend",
     "build": "npm run build:clean && npm run build:tsc && npm run build:di",
     "build:tsc": "tsc -p tsconfig.prod.json",
     "build:di": "copy 'src/**/*.{json,yaml,html,png}' dist/src",
